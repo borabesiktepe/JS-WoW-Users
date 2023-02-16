@@ -20,7 +20,7 @@ body {
     background-color: white;
     width: 400px;
     padding: 28px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Asul', sans-serif;
     font-size: 24px;
     border-radius: 25px;
     border: #aa936d;
@@ -28,12 +28,18 @@ body {
     transition: 0.6s ease-out;
 }
 
+.art {
+    position: fixed;
+    right: 20%;
+    z-index: -1;
+}
+
+/* ------- Search Box ------- */
 .search-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    margin-bottom: 32px;
 }
 
 .search-box input {
@@ -63,6 +69,11 @@ body {
     transition: 0.1s ease-out;
 }
 
+/* ------- Player Box ------- */
+.player-box {
+    margin-top: 32px;
+}
+
 .player-box .header {
     display: flex;
     justify-content: space-between;
@@ -72,6 +83,7 @@ body {
 
 .player-box .header .user-level {
     font-size: 32px;
+    font-weight: bold;
 }
 
 .player-box .user-mail {
@@ -84,12 +96,6 @@ body {
     margin-right: 10px;
 }
 
-.image-box {
-    position: fixed;
-    right: 20%;
-    z-index: -1;
-}
-
 .class-amblem {
     position: absolute;
     left: 75%;
@@ -100,6 +106,7 @@ body {
     height: 200px;
 }
 
+/* ------- Animations ------- */
 .fade-in {
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
