@@ -6,3 +6,6 @@ It displays the datas from the simple RestFul API I wrote with Spring in the web
 
 Related Project:
 https://github.com/borabesiktepe/Spring-RESTful-API-WoW-Users
+
+particles.js:
+https://github.com/VincentGarreau/particles.js/
