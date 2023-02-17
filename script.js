@@ -17,8 +17,11 @@ searchButton.addEventListener("click", () => {
         .then(json => {
             console.log(json);
 
+            document.title = `User :: ${json.userName}`;
             playerBox.style.display = "";
+            playerBox.classList.add("fadeIn");
             container.style.color = "#aa936d";
+            container.style.height = "288px";
 
             const userName = document.querySelector(".player-box .user-name");
             const userLevel = document.querySelector(".player-box .user-level");
@@ -29,8 +32,6 @@ searchButton.addEventListener("click", () => {
             userLevel.innerHTML = `${parseInt(json.userLevel)}`;
             userClass.innerHTML = `${json.userClass}`;
             userMail.innerHTML = `${json.email}`;
-
-            document.title = `User :: ${json.userName}`;
 
             switch (json.userClass) {
                 case "Warrior":
@@ -60,6 +61,12 @@ searchButton.addEventListener("click", () => {
                     classArt.src = "https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt53c129fceb86b6e0/5ee3e3d5e35f99710ac78ebd/W4Q96YE42NCC1457037563833.png";
                     classAmblem.src = "https://images.blz-contentstack.com/v3/assets/blt3452e3b114fab0cd/blt8bfa36196bf61105/5ee3e3d7889f917094610ea0/IMLWRYPWBRYL1457037563416.png";
                     break;
+
+                default:
+                    container.style.background = "#fff";
+                    document.body.style.background = "";
+                    classArt.src = "";
+                    classAmblem.src = "";
             }
         })
         .catch((error) => {

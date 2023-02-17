@@ -19,13 +19,14 @@ body {
     position: relative;
     background-color: white;
     width: 400px;
+    height: 110px;
     padding: 28px;
     font-family: 'Asul', sans-serif;
     font-size: 24px;
     border-radius: 25px;
     border: #aa936d;
     border-style: solid;
-    transition: 0.6s ease-out;
+    transition: 0.3s ease-out;
 }
 
 .art {
@@ -107,7 +108,7 @@ body {
 }
 
 /* ------- Animations ------- */
-.fade-in {
+.fadeIn {
     animation: 0.5s fadeIn forwards;
     animation-delay: 0.5s;
 }
