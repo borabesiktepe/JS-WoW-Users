@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const searchButton = document.querySelector(".search-box button");
+const searchInput = document.querySelector(".search-box input");
 const playerBox = document.querySelector(".player-box");
 const classArt = document.querySelector(".art img");
 const classAmblem = document.querySelector(".class-amblem img");
@@ -7,7 +8,7 @@ const classAmblem = document.querySelector(".class-amblem img");
 playerBox.style.display = "none";
 
 searchButton.addEventListener("click", () => {
-    const userID = document.querySelector(".search-box input").value;
+    const userID = searchInput.value;
 
     if (userID === "")
         return;
@@ -16,6 +17,12 @@ searchButton.addEventListener("click", () => {
         .then(response => response.json())
         .then(json => {
             console.log(json);
+
+            if (json.status === 400) {
+                searchInput.value = "";
+                searchInput.placeholder = "Invalid ID";
+                return;
+            }
 
             document.title = `User :: ${json.userName}`;
             playerBox.style.display = "";
