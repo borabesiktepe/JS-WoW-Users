@@ -100,11 +100,17 @@ body {
 .class-amblem {
     position: absolute;
     left: 75%;
-    top: 55%;
+    top: 45%;
 }
 
 .class-amblem img {
     height: 200px;
+    transition: 0.2s ease-out;
+}
+
+.class-amblem img:hover {
+    height: 210px;
+    transition: 0.1s ease-out;
 }
 
 /* ------- Animations ------- */
@@ -124,4 +130,4 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-  }
+}
